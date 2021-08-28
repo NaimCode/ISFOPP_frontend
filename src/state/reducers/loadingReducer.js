@@ -1,6 +1,6 @@
 import * as actionType from "../../data/const";
 
-const reducer = (state = true, action) => {
+const reducer = (state = false, action) => {
   switch (action.type) {
     case actionType.CHARGING:
       return true;

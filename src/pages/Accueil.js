@@ -1,33 +1,26 @@
 import Hero from "../components/Hero";
-import { useEffect } from "react";
-import { bindActionCreators } from "redux";
-import { actionCreators } from "../state/index";
-import { useDispatch, useSelector } from "react-redux";
-import { objectIsEmpty } from "../functions/etat";
+import { useEffect, useState } from "react";
+
 import { API } from "../env";
 
 const Accueil = () => {
-  const accueil = useSelector((state) => state.accueil);
+  const [isLoading, setisLoading] = useState(false);
+  const [accueil, setaccueil] = useState();
 
-  const { setAccueil, loadingTrue, loadingFalse } = bindActionCreators(
-    actionCreators,
-    useDispatch()
-  );
   useEffect(() => {
-    if (objectIsEmpty(accueil)) {
-      loadingTrue();
-      fetch(`${API}accueil`)
-        .then((response) => {
-          if (response.ok) return response.json();
-          else throw response;
-        })
-        .then((data) => {
-          setAccueil(data);
-        })
-        .finally(() => {
-          loadingFalse();
-        });
-    }
+    setisLoading(true);
+    fetch(`${API}accueil`)
+      .then((response) => {
+        if (response.ok) return response.json();
+        else throw response;
+      })
+      .then((data) => {
+        setaccueil(data);
+      })
+      .finally(() => {
+        setisLoading(false);
+      });
+
     console.log(accueil);
   }, []);
   return (

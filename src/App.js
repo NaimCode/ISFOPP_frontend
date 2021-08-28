@@ -16,20 +16,14 @@ function App() {
 
   return (
     <Router>
-      {loading ? (
-        <div className="h-screen w-screen flex justify-center items-center ">
-          <Loading styles={"text-3xl text-primary"} />
-        </div>
-      ) : (
-        <div className="h-screen bg-gray-800">
-          <Navbar />
-          <Switch>
-            <Route path="/">
-              <Accueil />
-            </Route>
-          </Switch>
-        </div>
-      )}
+      <div className="h-screen bg-gray-800">
+        <Navbar />
+        <Switch>
+          <Route path="/">
+            <Accueil />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
