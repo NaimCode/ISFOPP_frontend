@@ -8,7 +8,6 @@ const Accueil = () => {
   const [accueil, setaccueil] = useState();
 
   useEffect(() => {
-    setisLoading(true);
     fetch(`${API}accueil`)
       .then((response) => {
         if (response.ok) return response.json();
@@ -18,14 +17,19 @@ const Accueil = () => {
         setaccueil(data);
       })
       .finally(() => {
-        setisLoading(false);
+        console.log(accueil);
       });
-
-    console.log(accueil);
   }, []);
   return (
     <div>
-      <Hero />
+      {isLoading ? (
+        <div className="h-screen w-screen bg-white flex justify-center items-center"></div>
+      ) : (
+        <div>
+          {" "}
+          <Hero annonce={accueil.Annonces} />{" "}
+        </div>
+      )}
     </div>
   );
 };
