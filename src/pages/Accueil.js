@@ -16,7 +16,15 @@ const Accueil = () => {
         setaccueil(data);
       });
   }, []);
-  return <div>{accueil && <Hero annonce={accueil.Annonces} />}</div>;
+  return (
+    <div>
+      {accueil && (
+        <div>
+          <Hero annonce={accueil.Annonces} />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Accueil;

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { listMenu } from "../data/internal";
 import { MdArrowDropDown as DropdownIcon } from "react-icons/md";
+import BigButton from "./BigButton";
 // import { bindActionCreators } from "redux";
 // import { actionCreators } from "../state/index";
 // import { useDispatch } from "react-redux";
@@ -10,7 +11,7 @@ import { MdArrowDropDown as DropdownIcon } from "react-icons/md";
 //   );
 const Navbar = () => {
   return (
-    <div className="bg-white py-1 flex justify-between items-center fixed w-screen md:px-12 ">
+    <div className="bg-white py-1 flex justify-between items-center z-50 fixed w-screen md:px-12 ">
       <Link to="/">
         <img src="./logo.png" alt="" className="h-14" />
       </Link>
@@ -28,12 +29,7 @@ const Navbar = () => {
           )
         )}
       </div>
-
-      <Link to="/mon_espace">
-        <div className="font-semibold font-title px-7 py-1 border-2 border-primary text-primary text-lg rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white overflow-hidden">
-          Mon espace
-        </div>
-      </Link>
+      <BigButton link="/mon_space" color="primary" title="Mon espace" />
     </div>
   );
 };
