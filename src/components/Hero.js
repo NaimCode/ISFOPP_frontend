@@ -3,7 +3,7 @@ import { getImageFromApi } from "../functions";
 
 import { GrLinkNext as NextIcon } from "react-icons/gr";
 const Hero = ({ annonce }) => {
-  console.log(annonce);
+
   return (
     <div className="w-screen overflow-hidden h-screen bg-secondary relative">
       <img
