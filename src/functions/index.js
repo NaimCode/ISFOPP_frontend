@@ -21,4 +21,17 @@ export const getImageFromApi = (image, type) => {
         return `${API}${img.url}`;
     }
   }
+  switch (type) {
+    case "large":
+      return `${API}/${img.formats.large.url}`;
+    case "medium":
+      return `${API}/${img.formats.medium.url}`;
+    case "small":
+      return `${API}/${img.formats.small.url}`;
+    case "thumbnail":
+      return `${API}/${img.formats.thumbnail.url}`;
+
+    default:
+      return `${API}/${img.url}`;
+  }
 };
