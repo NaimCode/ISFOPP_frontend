@@ -3,7 +3,6 @@ import { getImageFromApi } from "../functions";
 
 import { GrLinkNext as NextIcon } from "react-icons/gr";
 const Hero = ({ annonce }) => {
-
   return (
     <div className="w-screen overflow-hidden h-screen bg-secondary relative">
       <img
@@ -13,7 +12,6 @@ const Hero = ({ annonce }) => {
       />
       <div className="absolute left-0 top-1/3 flex flex-col  w-full px-8 py-10 bg-primary text-center bg-opacity-70 md:w-3/5 md:text-left">
         <h1 className="font-title text-3xl md:text-5xl font-bold text-white">
-          {" "}
           {annonce[0].Titre}
         </h1>
         <p className="font-body text-white opacity-75 pt-4 pb-5">

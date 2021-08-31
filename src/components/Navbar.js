@@ -11,7 +11,7 @@ import BigButton from "./BigButton";
 //   );
 const Navbar = () => {
   return (
-    <div className="bg-white py-1 flex justify-between items-center z-50 fixed w-screen md:px-12 ">
+    <div className="bg-white py-1 flex justify-between shadow-lg items-center z-50 fixed w-screen md:px-12 ">
       <Link to="/">
         <img src="./logo.png" alt="" className="h-14" />
       </Link>

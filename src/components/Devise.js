@@ -5,7 +5,7 @@ const Devise = ({ devise }) => {
   return (
     <div className="flex flex-col md:flex-row  md:justify-around py-10">
       {devise.map((d) => (
-        <div className="flex flex-col items-center gap-1 w-1/4">
+        <div className="flex flex-col items-center gap-1 w-1/4 anim1">
           <img
             src={getImageFromApi(d.image, "small")}
             alt=""
