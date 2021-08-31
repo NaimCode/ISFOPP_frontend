@@ -5,6 +5,7 @@ import { API } from "../env";
 import Devise from "../components/Devise";
 import { getImageFromApi } from "../functions";
 import PresentationMini from "../components/PresentationMini";
+import Notif from "../components/Notif";
 
 const Accueil = () => {
   const [accueil, setaccueil] = useState(null);
@@ -28,6 +29,7 @@ const Accueil = () => {
             <Hero annonce={accueil.Annonces} />
             <Devise devise={accueil.devise} />
             <PresentationMini presentation={accueil.presentation} />
+            <Notif />
           </div>
         </div>
       )}
