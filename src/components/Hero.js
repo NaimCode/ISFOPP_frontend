@@ -14,7 +14,7 @@ const Hero = ({ annonce }) => {
         <h1 className="font-title text-3xl md:text-5xl font-bold text-white">
           {annonce[0].Titre}
         </h1>
-        <p className="font-body text-white opacity-75 pt-4 pb-5">
+        <p className="font-body text-white opacity-70 pt-4 pb-5">
           {annonce[0].Description}
         </p>
         <Link to={annonce.Link} className="group flex">

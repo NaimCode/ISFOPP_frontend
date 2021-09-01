@@ -16,7 +16,7 @@ const PresentationMini = ({ presentation }) => {
         <h2 className="md:text-4xl font-title font-semibold">
           {presentation.titre}
         </h2>
-        <p className="py-6">{presentation.description}</p>
+        <p className="py-6 font-body opacity-60">{presentation.description}</p>
         <Link to="/presentation" className="group flex">
           <div className="flex gap-1 items-center font-title px-7 py-1 text-lg rounded-2xl transition-all duration-300 bg-secondary  overflow-hidden">
             <span> Plus de détail</span>

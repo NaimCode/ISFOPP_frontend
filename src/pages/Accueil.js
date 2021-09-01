@@ -5,12 +5,54 @@ import { API } from "../env";
 import Devise from "../components/Devise";
 import { getImageFromApi } from "../functions";
 import PresentationMini from "../components/PresentationMini";
-import Notif from "../components/Notif";
+import Event from "../components/Event";
+import Info from "../components/Info";
 
 const Accueil = () => {
   const [accueil, setaccueil] = useState(null);
 
   useEffect(() => {
+    const callback = function (entries) {
+      entries.forEach((entry) => {
+        // console.log(entry);
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-topOpa1");
+        } else {
+          entry.target.classList.remove("animate-topOpa1");
+          entry.target.classList.add("opacity-0");
+        }
+      });
+    };
+    const callback2 = function (entries) {
+      entries.forEach((entry) => {
+        // console.log(entry);
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-topOpa2");
+        } else {
+          entry.target.classList.remove("animate-topOpa2");
+          entry.target.classList.add("opacity-0");
+        }
+      });
+    };
+
+    const observer2 = new IntersectionObserver(callback2);
+
+    const observer = new IntersectionObserver(callback);
+    const targets2 = document.querySelectorAll(".anim2");
+    targets2.forEach(function (target) {
+      observer2.observe(target);
+    });
+    const targets = document.querySelectorAll(".anim1");
+    targets.forEach(function (target) {
+      observer.observe(target);
+    });
+
+    // return () => {
+    //   cleanup
+    // }
+
     fetch(`${API}/accueil`)
       .then((response) => {
         if (response.ok) return response.json();
@@ -29,7 +71,8 @@ const Accueil = () => {
             <Hero annonce={accueil.Annonces} />
             <Devise devise={accueil.devise} />
             <PresentationMini presentation={accueil.presentation} />
-            <Notif />
+            <Event />
+            <Info />
           </div>
         </div>
       )}

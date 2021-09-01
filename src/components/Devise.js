@@ -1,7 +1,6 @@
 import { getImageFromApi } from "../functions";
 
 const Devise = ({ devise }) => {
-  console.log(devise);
   return (
     <div className="flex flex-col md:flex-row  md:justify-around py-10">
       {devise.map((d) => (
@@ -12,7 +11,7 @@ const Devise = ({ devise }) => {
             className="h-48"
           />
           <h3 className="text-xl font-title font-semibold"> {d.titre}</h3>
-          <p>{d.description}</p>
+          <p className="font-body opacity-60">{d.description}</p>
         </div>
       ))}
     </div>
