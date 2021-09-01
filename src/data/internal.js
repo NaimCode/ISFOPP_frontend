@@ -10,13 +10,19 @@ export const listMenu = [
     dropdown: false,
   },
   {
+    title: "Contact",
+    route: "/contact",
+    dropdown: false,
+  },
+  {
+    title: "Administration",
+    route: "/administration",
+    dropdown: false,
+  },
+  {
     title: "Formations",
     route: "/formations",
     dropdown: true,
   },
-  {
-    title: "Pages",
-    route: "/pages",
-    dropdown: true,
-  },
+  ,
 ];

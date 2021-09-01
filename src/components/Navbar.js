@@ -29,7 +29,7 @@ const Navbar = () => {
           )
         )}
       </div>
-      <BigButton link="/mon_space" color="primary" title="Mon espace" />
+      {/* <BigButton link="/mon_space" color="primary" title="Mon espace" /> */}
     </div>
   );
 };
