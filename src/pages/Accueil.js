@@ -65,6 +65,7 @@ const Accueil = () => {
       });
   }, []);
   return (
+    //klklkklkl
     <div>
       {accueil && (
         <div className="h-screen w-screen overflow-x-hidden">
