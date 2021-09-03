@@ -3,11 +3,13 @@ const Footer = () => {
     <div>
       <footer class="text-gray-600 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <a class="flex flex-col md:flex-row title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img src="./logo.png" alt="" className="h-28" />
-            <span class="ml-3 text-2xl">ISFOPP</span>
+            <span class="ml-3 text-5xl md:text-3xl font-title mt-3 md:mt-0">
+              ISFOPP
+            </span>
           </a>
-          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          <p class="text-lg text-center text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © 2021 isfopp — powered by
             <a
               href="https://naimdev.com"
@@ -18,7 +20,7 @@ const Footer = () => {
               @Naim_Abdelkerim
             </a>
           </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <span class="inline-flex text-lg sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a class="text-gray-500">
               <svg
                 fill="currentColor"

@@ -18,8 +18,8 @@ const Event = () => {
   return (
     <div>
       {event && (
-        <div class="container px-3 md:px-24 py-24 mx-auto ">
-          <div class="flex flex-wrap w-full mb-20">
+        <div class="container px-3 md:px-24 py-10 md:py-24 mx-auto ">
+          <div class="flex flex-wrap w-full mb-5 md:mb-20">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 class="sm:text-5xl text-3xl font-medium title-font mb-2 text-gray-900">
                 Evenements
@@ -27,7 +27,7 @@ const Event = () => {
               <div class="h-1 w-20 bg-primary rounded"></div>
             </div>
           </div>
-          {event.slice(0,3).map((e) => (
+          {event.slice(0, 3).map((e) => (
             <div class="-my-8 divide-y-2 divide-gray-100">
               {event.indexOf(e) != 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">

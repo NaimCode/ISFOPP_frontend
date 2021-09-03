@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { listMenu } from "../data/internal";
 import { MdArrowDropDown as DropdownIcon } from "react-icons/md";
 import { AiFillPhone as PhoneIcon } from "react-icons/ai";
-import BigButton from "./BigButton";
+import { HiOutlineMenuAlt3 as MenuIcon } from "react-icons/hi";
 // import { bindActionCreators } from "redux";
 // import { actionCreators } from "../state/index";
 // import { useDispatch } from "react-redux";
@@ -12,11 +12,12 @@ import BigButton from "./BigButton";
 //   );
 const Navbar = () => {
   return (
-    <div className="bg-white py-1 flex justify-between shadow-lg items-center z-50 fixed w-screen md:px-12 ">
+    <div className="bg-white py-1 flex justify-between shadow-lg items-center z-50 fixed w-screen px-2 md:px-12 ">
       <Link to="/">
-        <img src="./logo.png" alt="" className="h-14" />
+        <img src="./logo.png" alt="" className="h-10 md:h-14" />
       </Link>
-      <div className="flex items-center gap-4 font-body">
+      <MenuIcon className="text-3xl text-primary" />
+      <div className="hidden md:flex items-center gap-4 font-body">
         {listMenu.map((m) =>
           m.dropdown ? (
             <div

@@ -12,8 +12,8 @@ const PresentationMini = ({ presentation }) => {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="w-full w flex flex-col  md:w-2/5 anim2">
-        <h2 className="md:text-4xl font-title font-semibold">
+      <div className="px-3 md:px-0 w-full text-center md:text-left items-center md:items-start flex flex-col  md:w-2/5 anim2">
+        <h2 className="text-3xl md:text-4xl font-title font-semibold pt-2 md:pt-0">
           {presentation.titre}
         </h2>
         <p className="py-6 font-body opacity-60">{presentation.description}</p>

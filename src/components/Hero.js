@@ -10,7 +10,7 @@ const Hero = ({ annonce }) => {
         alt=""
         className="object-cover h-full w-full"
       />
-      <div className="absolute left-0 top-1/3 flex flex-col  w-full px-8 py-10 bg-primary text-center bg-opacity-70 md:w-3/5 md:text-left">
+      <div className="absolute left-0 top-1/4 md:top-1/3 flex justify-center items-center md:items-start flex-col  w-full px-8 py-10 bg-primary text-center bg-opacity-70 md:w-3/5 md:text-left">
         <h1 className="font-title text-3xl md:text-5xl font-bold text-white">
           {annonce[0].Titre}
         </h1>

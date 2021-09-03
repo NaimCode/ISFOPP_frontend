@@ -4,8 +4,8 @@ const Temoignage = ({ temoignages }) => {
   return (
     <div>
       <section class="text-gray-600 body-font">
-        <div class="container px-5  md:px-16 py-24 mx-auto">
-          <div class="flex flex-wrap w-full mb-20 px-10 ">
+        <div class="container px-3  md:px-16 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-6 md:mb-20 px-3 md:px-10 ">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 class="sm:text-5xl text-3xl font-medium title-font mb-2 text-gray-900">
                 Témoignages
@@ -13,10 +13,14 @@ const Temoignage = ({ temoignages }) => {
               <div class="h-1 w-20 bg-primary rounded"></div>
             </div>
           </div>
-          <div class="flex flex-wrap -m-4">
+          <div class="flex flex-wrap -m-4 px-8">
             {temoignages.slice(0, 2).map((t) => (
               <div class="p-4 md:w-1/2 w-full">
-                <div class={`h-full bg-gray-100 p-8 rounded ${temoignages.indexOf(t)==0?"anim1":"anim2"}`}>
+                <div
+                  class={`h-full bg-gray-100 p-8 rounded ${
+                    temoignages.indexOf(t) == 0 ? "anim1" : "anim2"
+                  }`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
