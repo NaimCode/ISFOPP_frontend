@@ -28,7 +28,7 @@ const Info = () => {
             </div>
           </div>
           <div class="flex flex-wrap -m-4">
-            {info.map((i) => (
+            {info.slice(0, 4).map((i) => (
               <div class=" md:w-1/2 py-5 px-10">
                 <div class=" rounded-lg">
                   <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">

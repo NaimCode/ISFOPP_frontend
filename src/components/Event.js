@@ -27,7 +27,7 @@ const Event = () => {
               <div class="h-1 w-20 bg-primary rounded"></div>
             </div>
           </div>
-          {event.map((e) => (
+          {event.slice(0,3).map((e) => (
             <div class="-my-8 divide-y-2 divide-gray-100">
               {event.indexOf(e) != 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">

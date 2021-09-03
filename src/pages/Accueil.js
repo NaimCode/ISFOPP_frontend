@@ -8,6 +8,7 @@ import PresentationMini from "../components/PresentationMini";
 import Event from "../components/Event";
 import Info from "../components/Info";
 import Temoignage from "../components/Temoignage";
+import Footer from "../components/Footer";
 
 const Accueil = () => {
   const [accueil, setaccueil] = useState(null);
@@ -75,7 +76,8 @@ const Accueil = () => {
             <PresentationMini presentation={accueil.presentation} />
             <Event />
             <Info />
-            <Temoignage />
+            <Temoignage temoignages={accueil.temoignage} />
+            <Footer />
           </div>
         </div>
       )}
