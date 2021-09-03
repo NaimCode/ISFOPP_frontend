@@ -16,7 +16,7 @@ const Navbar = () => {
       <Link to="/">
         <img src="./logo.png" alt="" className="h-10 md:h-14" />
       </Link>
-      <MenuIcon className="text-3xl text-primary" />
+      <MenuIcon className="md:hidden text-3xl text-primary" />
       <div className="hidden md:flex items-center gap-4 font-body">
         {listMenu.map((m) =>
           m.dropdown ? (
