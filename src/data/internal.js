@@ -9,11 +9,7 @@ export const listMenu = [
     route: "/presentation",
     dropdown: false,
   },
-  {
-    title: "Contact",
-    route: "/contact",
-    dropdown: false,
-  },
+
   {
     title: "Administration",
     route: "/administration",
