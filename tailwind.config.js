@@ -6,7 +6,6 @@ module.exports = {
       animation: {
         topOpa1: "topOpa1 1.5s forwards",
         topOpa2: "topOpa2 2.1s forwards",
-     
       },
       keyframes: {
         topOpa1: {
@@ -19,7 +18,7 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
-      
+
         topOpa2: {
           from: {
             opacity: "0",
@@ -35,7 +34,6 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
-   
       },
       colors: {
         primary: "#8338ec",
