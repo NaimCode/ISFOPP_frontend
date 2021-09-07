@@ -28,7 +28,15 @@ const Info = () => {
             </div>
           </div>
           <div class="flex flex-wrap -m-4">
-            {info.map((i) => (
+            {info.sort((a,b)=>{
+              if(a.id<b.id)
+              return 1;
+              else{
+                if(a.id>b.id)
+                return -1;
+                else return 0
+              }
+            }).map((i) => (
               <div class=" md:w-1/2 py-5 px-10">
                 <div class=" rounded-lg">
                   <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">
@@ -43,7 +51,7 @@ const Info = () => {
                   <p class="leading-relaxed text-base text-body anim2">
                     {i.description}
                   </p>
-                  <Link to="/page">
+                  <Link to={`/news/${i.slug}`}>
                     <a class="text-indigo-500 inline-flex items-center mt-4 anim2">
                       Plus de détail
                       <svg

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import Presentation from "./pages/Presentation";
 import EventPage from "./pages/EventPage";
+import InfoPage from "./pages/InfoPage";
 function App() {
   return (
     <Router>
@@ -16,6 +17,10 @@ function App() {
           </Route>
             <Route path="/events/:slug">
             <EventPage />
+          </Route>
+         
+            <Route path="/news/:slug">
+            <InfoPage />
           </Route>
           <Route path="/">
             <Accueil />

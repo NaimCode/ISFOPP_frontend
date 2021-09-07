@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API } from "../env";
-import { getImageFromApi, monthNumToString } from "../functions";
+import { getImageFromApi, monthNumToString, sortDate } from "../functions";
 import { Link } from "react-router-dom";
 const Event = () => {
   const [event, setevent] = useState(null);
@@ -27,7 +27,7 @@ const Event = () => {
               <div class="h-1 w-20 bg-primary rounded"></div>
             </div>
           </div>
-          {event.map((e) => (
+          {event.sort(sortDate).map((e) => (
             <div class="-my-8 divide-y-2 divide-gray-100">
               {event.indexOf(e) != 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">
@@ -36,7 +36,7 @@ const Event = () => {
                     {e.jours}
                   </span>
                   <span class="mt-1 text-gray-500 text-sm">
-                    {monthNumToString(e.mois)} 2019
+                    {monthNumToString(e.mois)} {monthNumToString(e.annee)} 
                   </span>
                 </div>
                 <div class="md:flex-grow anim1">

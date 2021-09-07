@@ -66,3 +66,42 @@ export const monthNumToString = (num) => {
       return num
   }
 };
+
+export const sortDate=(a,b)=>{
+
+            if(a.annee>b.annee)
+              return -1
+              else {
+                if(a.annee<b.annee)
+                return 1
+                else
+                 {
+                    if(a.mois>b.mois)
+              return -1
+              else {
+                if(a.mois<b.mois)
+                return 1
+                else
+                 {
+                    if(a.jours>b.jours)
+              return -1
+              else {
+                if(a.jours<b.jours)
+                return 1
+                else
+                 {
+                   return 0
+                 }
+                
+              }
+            
+                 }
+                
+              }
+            
+                 }
+                
+              }
+            
+          
+}
