@@ -1,5 +1,5 @@
 import { AiOutlineLoading3Quarters as Loader } from "react-icons/ai";
-const Loading = ({ styles }) => {
+export const Loading = ({ styles }) => {
   return (
     <div>
       <Loader className={`animate-spin ${styles}`} />
@@ -7,4 +7,11 @@ const Loading = ({ styles }) => {
   );
 };
 
-export default Loading;
+export const LoadingPage = () => {
+  return (
+     <div className="w-screen h-screen bg-white">
+      <Loader className={`animate-spin text-primary text-2xl`} />
+    </div>
+  )
+}
+

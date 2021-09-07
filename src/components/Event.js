@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Event = () => {
   const [event, setevent] = useState(null);
   useEffect(() => {
-    fetch(`${API}/notifications`)
+    fetch(`${API}/notifications?_limit=3`)
       .then((response) => {
         if (response.ok) return response.json();
         else throw response;
@@ -27,7 +27,7 @@ const Event = () => {
               <div class="h-1 w-20 bg-primary rounded"></div>
             </div>
           </div>
-          {event.slice(0, 3).map((e) => (
+          {event.map((e) => (
             <div class="-my-8 divide-y-2 divide-gray-100">
               {event.indexOf(e) != 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">
@@ -46,7 +46,7 @@ const Event = () => {
                   <p class="leading-relaxed font-body opacity-60">
                     {e.description}
                   </p>
-                  <Link to="/page">
+                  <Link to={`/events/${e.slug}`}>
                     <a class="text-indigo-500 inline-flex items-center mt-4">
                       Plus de détail
                       <svg

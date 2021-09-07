@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import ReactMarkdownComponent from "../components/ReactMarkdown";
 import { API } from "../env";
-import ReactHtmlParser from "react-html-parser";
-import ReactMarkdown from "react-markdown";
+
+
 import Footer from "../components/Footer";
+import { LoadingPage } from "../components/Loading";
+import PageContent from "../components/PageContent";
 const Presentation = () => {
   const [page, setpage] = useState(null);
   useEffect(() => {
@@ -14,18 +16,13 @@ const Presentation = () => {
       })
       .then((data) => {
         setpage(data);
-        const u=2;
-        
+     
+
       });
   }, []);
   return (
     <div>
-      <div className="pt-11 md:pt-20 w-full flex justify-center">
-        <div className="max-w-screen-md px-3 flex flex-col items-center">
-          {page != null && ReactHtmlParser(page.contenu)}
-        </div>
-      </div>
-      <Footer />
+     {page==null? <LoadingPage/>:<PageContent content={page.contenu}/> }
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Info = () => {
   const [info, setinfo] = useState(null);
   useEffect(() => {
-    fetch(`${API}/informations`)
+    fetch(`${API}/informations?_limit=4`)
       .then((response) => {
         if (response.ok) return response.json();
         else throw response;
@@ -28,7 +28,7 @@ const Info = () => {
             </div>
           </div>
           <div class="flex flex-wrap -m-4">
-            {info.slice(0, 4).map((i) => (
+            {info.map((i) => (
               <div class=" md:w-1/2 py-5 px-10">
                 <div class=" rounded-lg">
                   <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">
