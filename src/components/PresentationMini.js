@@ -7,7 +7,7 @@ const PresentationMini = ({ presentation }) => {
     <div className="py-11 flex flex-col items-center md:justify-evenly  md:flex-row">
       <div className="w-full md:w-2/5 anim1">
         <img
-          src={getImageFromApi(presentation.image, "medium")}
+          src={getImageFromApi(presentation.image, "default")}
           alt=""
           className="object-cover w-full h-full"
         />

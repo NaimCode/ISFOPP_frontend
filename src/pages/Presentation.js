@@ -14,6 +14,8 @@ const Presentation = () => {
       })
       .then((data) => {
         setpage(data);
+        const u=2;
+        
       });
   }, []);
   return (
