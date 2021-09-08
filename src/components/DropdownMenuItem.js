@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { API } from "../env";
 const DropdownMenuItem = () => {
   const [menuFormstion, setmenuFormstion] = useState([]);
@@ -16,9 +17,11 @@ const DropdownMenuItem = () => {
   return (
     <>
       {menuFormstion.map((m) => (
-        <div className="cursor-pointer text-base py-4 px-6 hover:text-white  hover:bg-primaryLight bg-opacity-30 font-body font-thin ">
-          {m.titre}
-        </div>
+        <Link to={`/formations/${m.slug}`}>
+          <div className="cursor-pointer text-base py-4 px-6 hover:text-white  hover:bg-primaryLight bg-opacity-30 font-body font-thin ">
+            {m.titre}
+          </div>
+        </Link>
       ))}
     </>
   );

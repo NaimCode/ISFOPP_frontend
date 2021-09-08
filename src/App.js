@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Presentation from "./pages/Presentation";
 import EventPage from "./pages/EventPage";
 import InfoPage from "./pages/InfoPage";
+import FormationPage from "./pages/FormationPage";
 function App() {
   return (
     <Router>
@@ -17,9 +18,11 @@ function App() {
           <Route path="/events/:slug">
             <EventPage />
           </Route>
-
           <Route path="/news/:slug">
             <InfoPage />
+          </Route>
+          <Route path="/formations/:slug">
+            <FormationPage />
           </Route>
           <Route path="/">
             <Accueil />

@@ -7,7 +7,7 @@ const Footer = () => {
             href="/"
             class="flex flex-col md:flex-row title-font font-medium items-center md:justify-start justify-center text-gray-900"
           >
-            <img src="./logo.png" alt="" className="h-28" />
+            <img src="/logo.png" alt="" className="h-28" />
             <span class="ml-3 text-5xl md:text-3xl font-title mt-3 md:mt-0">
               ISFOPP
             </span>
