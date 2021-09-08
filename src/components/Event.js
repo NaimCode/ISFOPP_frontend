@@ -20,7 +20,7 @@ const Event = () => {
       {event && (
         <div class="container px-3 md:px-24 py-10 md:py-24 mx-auto ">
           <div class="flex flex-wrap w-full mb-5 md:mb-20">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <div class="group lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 class="sm:text-5xl text-3xl font-medium title-font mb-2 text-gray-900">
                 Evenements
               </h1>

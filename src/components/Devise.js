@@ -4,7 +4,7 @@ const Devise = ({ devise }) => {
   return (
     <div className="text-center md:text-left px-3 flex flex-col md:flex-row  md:justify-around py-10">
       {devise.map((d) => (
-        <div className="flex flex-col items-center gap-1 w-full md:w-1/4 anim1">
+        <div className="flex flex-col items-center gap-1 w-full md:w-1/4 anim1 transition-all duration-300 hover:text-primary hover:scale-110">
           <img
             src={getImageFromApi(d.image, "small")}
             alt=""
