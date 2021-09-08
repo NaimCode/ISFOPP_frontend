@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API } from "../env";
-import { getImageFromApi, monthNumToString } from "../functions";
+import { getImageFromApi } from "../functions";
 import { Link } from "react-router-dom";
 const Info = () => {
   const [info, setinfo] = useState(null);
@@ -28,49 +28,52 @@ const Info = () => {
             </div>
           </div>
           <div class="flex flex-wrap -m-4">
-            {info.sort((a,b)=>{
-              if(a.id<b.id)
-              return 1;
-              else{
-                if(a.id>b.id)
-                return -1;
-                else return 0
-              }
-            }).map((i) => (
-              <div class=" md:w-1/2 py-5 px-10">
-                <div class=" rounded-lg">
-                  <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">
-                    {i.titre}
-                  </h2>
-                  <img
-                    class="h-40 rounded w-full object-cover object-center mb-6 anim1"
-                    src={getImageFromApi(i.image, "k")}
-                    alt="content"
-                  />
+            {info
+              .sort((a, b) => {
+                if (a.id < b.id) return 1;
+                else {
+                  if (a.id > b.id) return -1;
+                  else return 0;
+                }
+              })
+              .map((i) => (
+                <div class=" md:w-1/2 py-5 px-10">
+                  <div class=" rounded-lg">
+                    <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">
+                      {i.titre}
+                    </h2>
+                    <img
+                      class="h-40 rounded w-full object-cover object-center mb-6 anim1"
+                      src={getImageFromApi(i.image, "k")}
+                      alt="content"
+                    />
 
-                  <p class="leading-relaxed text-base text-body anim2">
-                    {i.description}
-                  </p>
-                  <Link to={`/news/${i.slug}`}>
-                    <a class="text-indigo-500 inline-flex items-center mt-4 anim2">
-                      Plus de détail
-                      <svg
-                        class="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                    <p class="leading-relaxed text-base text-body anim2">
+                      {i.description}
+                    </p>
+                    <Link to={`/news/${i.slug}`}>
+                      <a
+                        href={`/news/${i.slug}`}
+                        class="text-indigo-500 inline-flex items-center mt-4 anim2"
                       >
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </Link>
+                        Plus de détail
+                        <svg
+                          class="w-4 h-4 ml-2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       )}

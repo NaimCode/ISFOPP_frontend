@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { API } from "../env";
 import Devise from "../components/Devise";
-import { getImageFromApi } from "../functions";
 import PresentationMini from "../components/PresentationMini";
 import Event from "../components/Event";
 import Info from "../components/Info";

@@ -18,7 +18,7 @@ const Temoignage = ({ temoignages }) => {
               <div class="p-4 md:w-1/2 w-full">
                 <div
                   class={`h-full bg-gray-100 p-8 rounded ${
-                    temoignages.indexOf(t) == 0 ? "anim1" : "anim2"
+                    temoignages.indexOf(t) === 0 ? "anim1" : "anim2"
                   }`}
                 >
                   <svg
@@ -32,7 +32,7 @@ const Temoignage = ({ temoignages }) => {
                   <p class="leading-relaxed mb-6 font-body opacity-60">
                     {t.temoignage}
                   </p>
-                  <a class="inline-flex items-center">
+                  <a href="/administration" class="inline-flex items-center">
                     <img
                       alt="testimonial"
                       src={getImageFromApi(t.image, "smallj")}

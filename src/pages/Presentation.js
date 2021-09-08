@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import ReactMarkdownComponent from "../components/ReactMarkdown";
+
 import { API } from "../env";
 
-
-import Footer from "../components/Footer";
 import { LoadingPage } from "../components/Loading";
 import PageContent from "../components/PageContent";
 const Presentation = () => {
@@ -16,13 +14,11 @@ const Presentation = () => {
       })
       .then((data) => {
         setpage(data);
-     
-
       });
   }, []);
   return (
     <div>
-     {page==null? <LoadingPage/>:<PageContent content={page.contenu}/> }
+      {page == null ? <LoadingPage /> : <PageContent content={page.contenu} />}
     </div>
   );
 };

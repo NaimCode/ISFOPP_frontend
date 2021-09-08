@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API } from "../env";
-import { getImageFromApi, monthNumToString, sortDate } from "../functions";
+import { monthNumToString, sortDate } from "../functions";
 import { Link } from "react-router-dom";
 const Event = () => {
   const [event, setevent] = useState(null);
@@ -29,14 +29,14 @@ const Event = () => {
           </div>
           {event.sort(sortDate).map((e) => (
             <div class="-my-8 divide-y-2 divide-gray-100">
-              {event.indexOf(e) != 0 && <hr className="bg-primary mt-6"></hr>}
+              {event.indexOf(e) !== 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">
                 <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col anim2">
                   <span class="font-bold  font-title text-accent text-5xl">
                     {e.jours}
                   </span>
                   <span class="mt-1 text-gray-500 text-sm">
-                    {monthNumToString(e.mois)} {monthNumToString(e.annee)} 
+                    {monthNumToString(e.mois)} {monthNumToString(e.annee)}
                   </span>
                 </div>
                 <div class="md:flex-grow anim1">
@@ -47,7 +47,10 @@ const Event = () => {
                     {e.description}
                   </p>
                   <Link to={`/events/${e.slug}`}>
-                    <a class="text-indigo-500 inline-flex items-center mt-4">
+                    <a
+                      href={`/events/${e.slug}`}
+                      class="text-indigo-500 inline-flex items-center mt-4"
+                    >
                       Plus de détail
                       <svg
                         class="w-4 h-4 ml-2"
