@@ -17,7 +17,7 @@ const Temoignage = ({ temoignages }) => {
             {temoignages.slice(0, 2).map((t) => (
               <div class="p-4 md:w-1/2 w-full">
                 <div
-                  class={`h-full bg-gray-100 p-8 rounded ${
+                  class={`h-full bg-gray-100 p-8 rounded transition-all duration-300 hover:scale-105 ${
                     temoignages.indexOf(t) === 0 ? "anim1" : "anim2"
                   }`}
                 >

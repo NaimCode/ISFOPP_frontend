@@ -37,16 +37,18 @@ const Info = () => {
                 }
               })
               .map((i) => (
-                <div class=" md:w-1/2 py-5 px-10">
+                <div class=" md:w-1/2 py-5 px-10 group">
                   <div class=" rounded-lg">
                     <h2 class="text-xl text-gray-900 font-medium title-font mb-4 anim1">
                       {i.titre}
                     </h2>
-                    <img
-                      class="h-40 rounded w-full object-cover object-center mb-6 anim1"
-                      src={getImageFromApi(i.image, "k")}
-                      alt="content"
-                    />
+                    <div className="h-40 rounded w-full  mb-6 anim1 overflow-hidden">
+                      <img
+                        className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
+                        src={getImageFromApi(i.image, "k")}
+                        alt="content"
+                      />
+                    </div>
 
                     <p class="leading-relaxed text-base text-body anim2">
                       {i.description}

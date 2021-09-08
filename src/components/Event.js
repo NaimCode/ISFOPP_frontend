@@ -28,7 +28,7 @@ const Event = () => {
             </div>
           </div>
           {event.sort(sortDate).map((e) => (
-            <div class="-my-8 divide-y-2 divide-gray-100">
+            <div class="-my-8 divide-y-2 divide-gray-100 transition-all duration-300 hover:scale-105">
               {event.indexOf(e) !== 0 && <hr className="bg-primary mt-6"></hr>}
               <div class="py-8 flex flex-wrap md:flex-nowrap">
                 <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col anim2">
