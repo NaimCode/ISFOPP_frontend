@@ -6,6 +6,7 @@ import Presentation from "./pages/Presentation";
 import EventPage from "./pages/EventPage";
 import InfoPage from "./pages/InfoPage";
 import FormationPage from "./pages/FormationPage";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/formations/:slug">
             <FormationPage />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/">
             <Accueil />

@@ -3,6 +3,7 @@ import { listMenu } from "../data/internal";
 import { MdArrowDropDown as DropdownIcon } from "react-icons/md";
 import { AiFillPhone as PhoneIcon } from "react-icons/ai";
 import { HiOutlineMenuAlt3 as MenuIcon } from "react-icons/hi";
+import { useHistory, useLocation } from "react-router-dom";
 import DropdownMenuItem from "./DropdownMenuItem";
 // import { bindActionCreators } from "redux";
 // import { actionCreators } from "../state/index";
@@ -12,6 +13,9 @@ import DropdownMenuItem from "./DropdownMenuItem";
 //     useDispatch()
 //   );
 const Navbar = () => {
+  const router = useHistory();
+  const location = useLocation();
+
   return (
     <div className="bg-white py-1 flex justify-between shadow-lg items-center z-50 fixed w-screen px-2 md:px-12 ">
       <Link to="/">
@@ -24,7 +28,9 @@ const Navbar = () => {
             <div className="group">
               <div
                 key={listMenu.indexOf(m)}
-                className="cursor-pointer flex items-end transition-all duration-300 hover:scale-105 hover:text-primary"
+                className={`cursor-pointer flex items-end transition-all duration-300 ${
+                  location.pathname === m.route && "scale-105 text-primary"
+                } hover:scale-105 hover:text-primary`}
               >
                 {m.title}
                 <DropdownIcon className="text-2xl " />
@@ -42,8 +48,14 @@ const Navbar = () => {
           )
         )}
       </div>
-      <button className="rounded-full bg-secondary p-2 group focus:outline-none">
-        <PhoneIcon className="text-3xl text-white transition-all duration-300 hover:scale-110" />
+      <button
+        onClick={() => {
+          router.push("/contact");
+        }}
+        className="group rounded-full hover:bg-yellow-600 bg-secondary p-2 group focus:outline-none flex items-center text-white font-bold font-body"
+      >
+        CONTACT
+        <PhoneIcon className="text-3xl text-white transition-all duration-300 group-hover:scale-110" />
       </button>
       {/* <BigButton link="/mon_space" color="primary" title="Mon espace" /> */}
     </div>
