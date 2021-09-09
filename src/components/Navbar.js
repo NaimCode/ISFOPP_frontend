@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { listMenu } from "../data/internal";
 import { MdArrowDropDown as DropdownIcon } from "react-icons/md";
 import { AiFillPhone as PhoneIcon } from "react-icons/ai";
-import { HiOutlineMenuAlt3 as MenuIcon } from "react-icons/hi";
+import { HiOutlineMenuAlt2 as MenuIcon } from "react-icons/hi";
 import { useHistory, useLocation } from "react-router-dom";
 import DropdownMenuItem from "./DropdownMenuItem";
 // import { bindActionCreators } from "redux";
@@ -18,10 +18,11 @@ const Navbar = () => {
 
   return (
     <div className="bg-white py-1 flex justify-between shadow-lg items-center z-50 fixed w-screen px-2 md:px-12 ">
-      <Link to="/">
-        <img src="/logo.png" alt="" className="h-10 md:h-14" />
-      </Link>
       <MenuIcon className="md:hidden text-3xl text-primary" />
+      <Link to="/">
+        <img src="/logo.png" alt="" className="h-12 md:h-14" />
+      </Link>
+
       <div className="hidden md:flex items-center gap-4 font-body">
         {listMenu.map((m) =>
           m.dropdown ? (
