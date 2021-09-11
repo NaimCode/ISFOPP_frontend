@@ -1,4 +1,4 @@
-//menu
+
 export const listMenu = [
   {
     title: "Accueil",
