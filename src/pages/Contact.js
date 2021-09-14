@@ -32,9 +32,9 @@ const Contact = () => {
                   <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
                     EMAIL
                   </h2>
-                  <a class="text-indigo-500 leading-relaxed">
+                  <span class="text-indigo-500 leading-relaxed">
                     isfopp2009@gmail.com
-                  </a>
+                  </span>
                   <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                     TEL
                   </h2>
