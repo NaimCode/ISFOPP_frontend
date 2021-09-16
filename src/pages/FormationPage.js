@@ -6,6 +6,7 @@ import { LoadingPage } from "../components/Loading";
 import PageContent from "../components/PageContent";
 import { getImageFromApi } from "../functions";
 const FormationPage = () => {
+  //hjhjhj
   const [event, setevent] = useState(null);
   const { slug } = useParams();
   useEffect(() => {
