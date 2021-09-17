@@ -1,5 +1,5 @@
 import { API } from "../env";
-
+//all functions
 export const objectIsEmpty = (obj) => {
   return Object.keys(obj).length === 0;
 };
